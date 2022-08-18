@@ -1,0 +1,34 @@
+ALGORITHM SENTENSE
+VAR
+ch:STRING ;
+
+i:INTEGER=0;
+count_words:INTEGER=1;
+count_vol:INTEGER=0;
+count_char:INTEGER=1;
+
+
+BEGIN
+Read(ch);
+WHILE (ch[i]<>".") DO
+   i:=i+1;
+   count_char:=count_char+1;
+   
+   IF (ch[i]=" ") THEN
+    count_words:=count_words+1;
+   END_IF
+
+   IF (ch[i]="a"OR ch[i]="A"OR ch[i]="e"OR ch[i]="E"OR ch[i]="i"OR ch[i]="I"OR ch[i]="o"OR ch[i]="O"OR ch[i]="u"OR ch[i]="U" ) THEN
+    count_vol:=count_vol+1;
+   END_IF
+
+
+
+END_WHILE
+
+
+write("the number of words :",count_words);
+write("the number of caracter :",count_char);
+write("the number of vol :",count_vol);
+    
+END
